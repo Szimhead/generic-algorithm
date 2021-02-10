@@ -8,7 +8,7 @@ from Brain import Brain
 class Dot:
 
     def __init__(self):
-        self.brain = Brain(30)
+        self.brain = Brain(110)
         self.pos = (main.WIDTH / 2, main.HEIGHT - 200)
         self.vel = (0, 0)
         self.acc = (0, 0)

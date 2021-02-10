@@ -23,15 +23,16 @@ class Brain:
 
         return clone
 
-    def mutate(self):
+    def mutate(self, steps, increment):
         mutationRate = 0.01
-        for i in range(len(self.directions)):
+        for i in range(max(steps - increment, 0), len(self.directions)):
             rand = random.random()
             if rand < mutationRate:
                 randomAngle = random.uniform(0, 2 * numpy.pi)
                 self.directions[i] = (numpy.cos(randomAngle), numpy.sin(randomAngle))
 
     def increaseMoves(self, moves):
-        for i in range(len(self.directions), len(self.directions) + moves):
+        for i in range(moves):
             randomAngle = random.uniform(0, 2 * numpy.pi)
             self.directions.append((numpy.cos(randomAngle), numpy.sin(randomAngle)))
+        print(len(self.directions))
