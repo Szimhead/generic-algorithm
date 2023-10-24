@@ -1,1 +1,1 @@
-generic-algorithm
+genetic-algorithm
